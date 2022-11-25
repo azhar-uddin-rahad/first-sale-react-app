@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import logo from  '../../assits/logo.png';
+import { AuthContext } from '../../Contex/AuthProvider/AuthProvider';
 import SocialLogin from '../Share/SocialLogin/SocialLogin.';
 
 const Login = () => {
+    const { register,formState: { errors }, handleSubmit } = useForm();
+    const {LoginUser} = useContext(AuthContext);
+    const [loginError,setLoginError] =useState('');
+    const [userLoginEmail,setUserLoginEmail]=useState('');
+
+
+
+    const handleLogin= data => {
+        setLoginError(' ');
+        console.log(data);
+        LoginUser(data.email,data.password)
+        .then(result =>{
+          const user=result.user;
+          console.log(user);
+          setUserLoginEmail(data.email)
+         
+        })
+        .catch(error=> {
+          console.log(error.message)
+        setLoginError(error.message)
+        
+        })
+        
+      }
+
+
+
+
     return (
         <div>
             <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
@@ -16,7 +46,7 @@ const Login = () => {
                    </a>
                </div>
                <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
-                   <form onSubmit={''}>
+                   <form onSubmit={handleSubmit(handleLogin)}>
                       
                        <div className="mt-4">
                            <label
@@ -29,8 +59,10 @@ const Login = () => {
                                <input
                                    type="email"
                                    name="email"
+                                   {...register("email", { required: true })}
                                    className="block p-3 w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                />
+                                {errors.email?.type === 'required' && <p role="alert" className="text-error">Email is required</p>}
                            </div>
                        </div>
                       
@@ -45,8 +77,11 @@ const Login = () => {
                                <input
                                    type="password"
                                    name="password"
+                                   {...register("password",{ required: "Password is required",
+                                     minLength:{value:6,message:"password must be 6 characters or lenger"}})} 
                                    className="block p-3 w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                />
+                                {errors.password && <p role="alert" className="text-error">{errors.password?.message}</p>}
                            </div>
                        </div>
                       
@@ -65,6 +100,10 @@ const Login = () => {
                            </Link>
                        </span>
                    </div>
+                   {
+               loginError && <p className="text-red">{loginError} Firebase and auth error</p>
+                    }
+
                    <div className="flex items-center w-full my-4">
                        <hr className="w-full" />
                        <p className="px-3 ">OR</p>

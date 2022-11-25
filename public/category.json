@@ -1,0 +1,25 @@
+[
+{
+"brand_id" : 1,
+"brand": "apple",
+"brand_name":"Apple Laptops ",
+"img":"https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png",
+"brand_details":"MacOS is the operating system by Apple itself and is specially built for Apple computers. Thanks to this, software and hardware work well together."
+},
+{
+"brand_id" : 2,
+"brand": "msi",
+"brand_name":"MSI Laptops ",
+"img":"https://i.pinimg.com/originals/ee/70/a9/ee70a90951e6115e8b759744ad4ca29a.png",
+"brand_details": "MSI laptops are for people who want a powerful and also portable laptop. They have great battery life and can be used on the go without having to worry about charging it every few hours."
+},
+{
+"brand_id" : 3,
+"brand": "hp",
+"brand_name":"HP Laptops",
+"img":"https://www.pngarts.com/files/18/Hewlett-Packard-Icon-PNG.png",
+"brand_details": "HP's impressive business laptop is back with its smart design, great battery life, and 2-in-1 prowess. Of course, it's more powerful now than it's ever been"
+}
+
+]
+

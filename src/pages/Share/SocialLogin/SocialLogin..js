@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../Contex/AuthProvider/AuthProvider';
 
 const SocialLogin= () => {
+    const {providerLogin} =useContext(AuthContext)
+    const handleSocalLogin=()=>{
+      
+        providerLogin()
+        .then(result =>{
+            const user=result.user;
+            console.log(user);
+        })
+        .catch(error => console.log(error))
+    }
+    
     return (
-        <button onClick=''
+        <button onClick={handleSocalLogin}
       aria-label="Login with Google"
       type="button"
       className="flex items-center justify-center w-full p-2 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400"

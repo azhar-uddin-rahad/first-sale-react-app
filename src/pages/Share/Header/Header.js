@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from  '../../../assits/logo.png'
+import { AuthContext } from '../../../Contex/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const {user,logOut}= useContext(AuthContext)
+    const handleLogOut=()=>{
+        logOut()
+        .then(result =>{
+
+        })
+        .catch(error => console.log(error));
+    }
+
     const menubar = <>
          <li><Link to='/'>Home</Link></li>
           <li><Link to='/'>About </Link></li>
-          <li><Link to='/login'>Login</Link></li>
+          {
+            user?.uid ? <>
+             <li><Link onClick={handleLogOut} to='/login'>Log Out</Link></li>
+            
+            </>
+            :
+            <>
+            <li><Link to='/login'>Login</Link></li>
+           
+           </>
+          }
+         
     
     
     </>
