@@ -1,5 +1,5 @@
 import React from 'react';
-import Category from '../Category/Category';
+import CategoryOPtion from '../CategoryOPtion/CategoryOPtion';
 import TopBanner from '../TopBanner/TopBanner';
 import AdsCard from './AdsCard/AdsCard';
 
@@ -8,7 +8,7 @@ const Home = () => {
         <div>
            <TopBanner></TopBanner>
            <AdsCard></AdsCard>
-           <Category></Category>
+           <CategoryOPtion></CategoryOPtion>
             
         </div>
     );

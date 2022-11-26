@@ -1,3 +1,4 @@
+import Category from "../../Category/Category";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 
@@ -21,6 +22,11 @@ const routes =createBrowserRouter([
             {
                 path: '/register',
                 element:<Register></Register>
+            },
+            {
+                path: '/category/:id',
+                element:<Category></Category>,
+                loader: ({params})=>fetch(`http://localhost:5000/category/${params.id}`)
             }
         ]
         
