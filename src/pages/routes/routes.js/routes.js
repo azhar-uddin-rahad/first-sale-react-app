@@ -2,6 +2,7 @@ import Category from "../../Category/Category";
 import AddProduct from "../../Dashboard/AddProduct/AddProduct";
 import AllUsers from "../../Dashboard/AllUsers/AllUsers";
 import Dashboard from "../../Dashboard/Dashboard/Dashboard";
+import Myproduct from "../../Dashboard/Myproduct/Myproduct";
 import Payment from "../../Dashboard/Payment/Payment";
 import DashBoardLayout from "../../Layout/DashBoardLayout";
 import Login from "../../Login/Login";
@@ -17,7 +18,7 @@ const routes =createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
-        errorElement:<DisplayError></DisplayError>,
+      
         children:[
             {
                 path: '/',
@@ -54,6 +55,11 @@ const routes =createBrowserRouter([
                 {
                     path:'/dashboard/allusers',
                     element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+              
+                },
+                {
+                    path:'/dashboard/myproduct',
+                    element: <Myproduct></Myproduct>
               
                 },
                 {

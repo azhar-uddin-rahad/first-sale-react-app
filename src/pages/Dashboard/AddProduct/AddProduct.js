@@ -18,6 +18,23 @@ const AddProduct = () => {
    
   const  handlseProductData=(event)=>{
     event.preventDefault();
+
+    fetch(`http://localhost:5000/myproduct`,{
+      method: 'PUT',
+      headers:{
+        'content-type' : 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(data =>{
+      console.log(data)
+    })
+
+
+
+
+
+
     const form = event.target;
     const title = form.title.value;
     const model=form.model.value;
