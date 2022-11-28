@@ -50,7 +50,7 @@ const Register = () => {
         accountType
       
       };
-    fetch('http://localhost:5000/users',{
+    fetch('https://first-sale-server.vercel.app/users',{
      method:'POST',
      headers:{
       'content-type' : 'application/json'

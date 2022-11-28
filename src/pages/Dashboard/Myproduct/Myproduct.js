@@ -7,7 +7,7 @@ const Myproduct = () => {
 
     
 
-  const url = `http://localhost:5000/myproduct?email=${user?.email}`;
+  const url = `https://first-sale-server.vercel.app/myproduct?email=${user?.email}`;
 
   const { data: bookingproducts = [],refetch } = useQuery({
       queryKey: ['bookingproducts', user?.email],
@@ -23,10 +23,12 @@ const Myproduct = () => {
 
   const handleDelete= id => {
     const proceed = window.confirm("Are you Delete this Items");
+    console.log(id);
     if(proceed){
         fetch(`http://localhost:5000/myproduct/${id}`,{
             method: 'DELETE',
          headers:{
+          authorization: `bearer ${localStorage.getItem('accessToken')}` 
 
          }
         })
@@ -34,7 +36,8 @@ const Myproduct = () => {
         .then(data => {
             console.log(data);
             if(data.deletedCount > 0){
-                alert('deleted successFully')
+                alert('deleted successFully');
+
                 refetch()
             }
         })

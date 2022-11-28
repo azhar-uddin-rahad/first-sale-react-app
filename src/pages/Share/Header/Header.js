@@ -15,11 +15,12 @@ const Header = () => {
 
     const menubar = <>
          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/'>About </Link></li>
+          <li><Link to='/blogs'>Blog</Link></li>
           <li><Link to='/dashboard'>Dashboard</Link></li>
           {
             user?.uid ? <>
              <li><Link onClick={handleLogOut} to='/login'>Log Out</Link></li>
+             <li> {user?.email}</li>
              
             
             </>

@@ -19,7 +19,7 @@ const AddProduct = () => {
   const  handlseProductData=(event)=>{
     event.preventDefault();
 
-    fetch(`http://localhost:5000/myproduct`,{
+    fetch(`https://first-sale-server.vercel.app/myproduct`,{
       method: 'PUT',
       headers:{
         'content-type' : 'application/json'
@@ -72,7 +72,7 @@ const AddProduct = () => {
      published_date: value
 
     }
-    fetch('http://localhost:5000/categorys',{
+    fetch('https://first-sale-server.vercel.app/categorys',{
         method: 'POST',
         headers:{
             'content-type' : 'application/json'

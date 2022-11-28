@@ -11,7 +11,7 @@ const BookingModal = ({productInfo,setProductInfo}) => {
     const handleBooking = event => {
       event.preventDefault();
 
-      fetch(`http://localhost:5000/laptop/${_id}`,{
+      fetch(`https://first-sale-server.vercel.app/laptop/${_id}`,{
         method: 'PUT',
         headers:{
           'content-type' : 'application/json'
@@ -40,7 +40,7 @@ const BookingModal = ({productInfo,setProductInfo}) => {
         product_img: image_url,
         productName: title
     }
-    fetch('http://localhost:5000/bookingproducts',{
+    fetch('https://first-sale-server.vercel.app/bookingproducts',{
       method: 'POST',
       headers:{
         'content-type' : 'application/json'
