@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contex/AuthProvider/AuthProvider';
 
 const Dashboard = () => {
@@ -11,10 +12,8 @@ const Dashboard = () => {
       queryFn: async () => {
           const res = await fetch(url,{
             headers: {
-
-            authorization: `bearer ${localStorage.getItem('accessToken')}` 
-
-        }});
+             authorization: `bearer ${localStorage.getItem('accessToken')}` 
+ }});
           const data = await res.json();
           return data;
       }
@@ -34,34 +33,32 @@ const Dashboard = () => {
             </tr>
           </thead>
           <tbody>
-          {
+          {bookingproducts?.length &&
+
                             bookingproducts.map((bookingproduct, i) => <tr key={bookingproduct._id}>
                                 <th>{i+1}</th>
                               <td><div className="avatar m-5">
                             <div className="w-24  mask mask-squircle">
-                                <img src={bookingproduct.product_img} />
+                                <img src={bookingproduct.product_img} alt=""/>
                             </div>
                             </div>
                             </td>
                                 <td><div className='w-4/5'>{bookingproduct.productName}</div></td>
                                 <td>{bookingproduct.price}</td>
-                                <td><button className='btn btn-primary btn-sm'>Pay</button></td>
-                               {/*  {
-                                        booking.price && !booking.paid && <Link
-                                            to={`/dashboard/payment/${booking._id}`}
+                                <td> {
+                                        bookingproduct.price && !bookingproduct.paid && <Link
+                                            to={`/dashboard/payment/${bookingproduct._id}`}
                                         >
                                             <button
                                                 className='btn btn-primary btn-sm'
                                             >Pay</button>
                                         </Link>
                                     }
-                                   */}
-                                 
-{/* 
+ 
                               {
-                                <td>{booking.price && booking.paid && <span className="text-primary">Paid</span>}</td>
-                              } */}
-
+                                bookingproduct.price && bookingproduct.paid && <span className="text-primary">Paid</span>
+                              } 
+                            </td>
                             </tr>)
                         }
           </tbody>

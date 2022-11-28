@@ -12,11 +12,10 @@ const Login = () => {
     const { register,formState: { errors }, handleSubmit } = useForm();
     const {LoginUser} = useContext(AuthContext);
     const [loginError,setLoginError] =useState('');
-    const [userLoginEmail,setUserLoginEmail]=useState('');
-    const [token]=useToken(userLoginEmail);
+    const [userLoginEmail,setUserLoginEmail]=useState('');  
     const location=useLocation();
-    const navigate = useNavigate();
-    
+    const navigate = useNavigate(); 
+    const [token]=useToken(userLoginEmail);
     const from =location.state?.from?.pathname || '/';
 
     if(token){
