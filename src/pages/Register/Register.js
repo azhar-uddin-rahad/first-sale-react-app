@@ -27,7 +27,7 @@ const Register = () => {
     
             updateUser(userInfo)
               .then(() => {
-                navigate('/')
+                svaeUser(data.email,data.name,data.accountType)
               })
     
               .catch((error) => console.log(error));
@@ -39,6 +39,31 @@ const Register = () => {
   
 
     }
+    const svaeUser=(email,name,accountType)=>{
+      const user={
+        email,
+        name,
+        accountType
+      
+      };
+    fetch('http://localhost:5000/users',{
+     method:'POST',
+     headers:{
+      'content-type' : 'application/json'
+     },
+     body: JSON.stringify(user)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      navigate('/')
+      
+    })
+    }
+
+
+
+
   return (
     <div>
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
@@ -89,6 +114,32 @@ const Register = () => {
                  {errors.email?.type === 'required' && <p role="alert" className="text-error">Email is required</p>}
               </div>
             </div>
+            <div className="mt-4">
+              <label  htmlFor="email" className="block text-sm font-medium text-gray-700 undefined" >
+               Select Account Type
+              </label>
+              <div className="flex flex-col items-start">
+                {/* <input type="email" name="email"
+                  {...register("email", { required: true })} 
+                  className="block w-full mt-1 p-3 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                /> */}
+                <select name="accountType" {...register("accountType", { required: true })} className="select select-bordered w-full max-w-xs">
+                <option value='user'>User</option>
+                <option value='seller'>Seller</option>
+              </select>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
 
             <div className="mt-4">
               <label

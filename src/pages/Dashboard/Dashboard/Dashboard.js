@@ -16,7 +16,7 @@ const Dashboard = () => {
   })
     return (
         <div>
-      <h1 className="text-2xl">My Product Booking</h1>
+      <h1 className="text-2xl">My orders</h1>
       <div className="overflow-x-auto">
         <table className="table-auto w-full">
           <thead>
