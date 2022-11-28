@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../../Contex/AuthProvider/AuthProvider";
 
 const BookingModal = ({productInfo,setProductInfo}) => {
-    const {title,resalePrice,_id}=productInfo;
+    const {title,image_url,resalePrice,_id}=productInfo;
     
     const {user}=useContext(AuthContext);
 
@@ -37,6 +37,7 @@ const BookingModal = ({productInfo,setProductInfo}) => {
         phone,
         price,
         meeting,
+        product_img: image_url,
         productName: title
     }
     fetch('http://localhost:5000/bookingproducts',{
