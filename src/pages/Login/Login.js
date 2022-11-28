@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from  '../../assits/logo.png';
 import { AuthContext } from '../../Contex/AuthProvider/AuthProvider';
+import useToken from '../../hooks/UseToken';
 import SocialLogin from '../Share/SocialLogin/SocialLogin.';
 
 
@@ -12,12 +13,15 @@ const Login = () => {
     const {LoginUser} = useContext(AuthContext);
     const [loginError,setLoginError] =useState('');
     const [userLoginEmail,setUserLoginEmail]=useState('');
+    const [token]=useToken(userLoginEmail);
     const location=useLocation();
     const navigate = useNavigate();
     
     const from =location.state?.from?.pathname || '/';
 
-
+    if(token){
+        navigate(from, {replace:true})
+      }
 
     const handleLogin= data => {
         setLoginError(' ');
@@ -27,7 +31,7 @@ const Login = () => {
           const user=result.user;
           console.log(user);
           setUserLoginEmail(data.email)
-          navigate(from, {replace:true})
+         
         })
         .catch(error=> {
           console.log(error.message)

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import SocialLogin from "../Share/SocialLogin/SocialLogin.";
 import { AuthContext } from "../../Contex/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import useToken from "../../hooks/UseToken";
 
 
 const Register = () => {
@@ -12,8 +13,11 @@ const Register = () => {
     const {createUser,updateUser}=useContext(AuthContext);
     const [signUpError, setSignUpError] = useState("");
     const navigate = useNavigate();
-
-
+    const [createdUserEmail,setCreatedUserEmail]=useState('')
+    const [token] =useToken(createdUserEmail)
+    if(token){
+      navigate('/')
+    }
     const handleLogin=(data)=>{
         console.log(data)
         setSignUpError('')
@@ -56,8 +60,7 @@ const Register = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data)
-      navigate('/')
-      
+      setCreatedUserEmail(email)
     })
     }
 
@@ -119,10 +122,7 @@ const Register = () => {
                Select Account Type
               </label>
               <div className="flex flex-col items-start">
-                {/* <input type="email" name="email"
-                  {...register("email", { required: true })} 
-                  className="block w-full mt-1 p-3 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                /> */}
+               
                 <select name="accountType" {...register("accountType", { required: true })} className="select select-bordered w-full max-w-xs">
                 <option value='user'>User</option>
                 <option value='seller'>Seller</option>
