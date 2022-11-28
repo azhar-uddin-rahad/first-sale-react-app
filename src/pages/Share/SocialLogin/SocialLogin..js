@@ -1,14 +1,23 @@
 import React, { useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contex/AuthProvider/AuthProvider';
 
 const SocialLogin= () => {
     const {providerLogin} =useContext(AuthContext)
+    const location=useLocation();
+    const navigate = useNavigate();
+    const from =location.state?.from?.pathname || '/';
     const handleSocalLogin=()=>{
+      
       
         providerLogin()
         .then(result =>{
             const user=result.user;
+            navigate(from, {replace:true})
             console.log(user);
+
+
+
         })
         .catch(error => console.log(error))
     }

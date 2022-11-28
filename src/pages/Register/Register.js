@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assits/logo.png";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../Share/SocialLogin/SocialLogin.";
@@ -11,6 +11,7 @@ const Register = () => {
     const { register,formState: { errors }, handleSubmit } = useForm();
     const {createUser,updateUser}=useContext(AuthContext);
     const [signUpError, setSignUpError] = useState("");
+    const navigate = useNavigate();
 
 
     const handleLogin=(data)=>{
@@ -26,7 +27,7 @@ const Register = () => {
     
             updateUser(userInfo)
               .then(() => {
-               
+                navigate('/')
               })
     
               .catch((error) => console.log(error));
