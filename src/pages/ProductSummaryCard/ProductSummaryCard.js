@@ -1,12 +1,45 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import toast from 'react-hot-toast';
 import { FaMapMarkerAlt,FaCheckCircle, FaPhoneAlt} from "react-icons/fa";
 import Loder from '../Share/Loder/Loder';
 
 
 
 const ProductSummaryCard = ({category,setProductInfo}) => {
-    const {_id,title,brand,model,image_url,published_date,author_name,author_img,location,mobile,resalePrice,originalPrice,yearsOfUse,cpuProcessor,memory,storage,operationSystem,batteryPowerSupply
+    const {_id,title,brand,model,image_url,published_date,author_name,author_img,location,mobile,resalePrice,originalPrice,yearsOfUse,cpuProcessor,memory,storage,operationSystem,batteryPowerSupply,report
     } =category;
+
+     const {data: sellers=[],refetch}=useQuery({
+      queryKey:['seller'],
+      queryFn:async()=>{
+       const res =await fetch('http://localhost:5000/dashboard/seller')
+       const data =await res.json();
+       console.log(data.verifySeller)
+       return data;
+      }
+     
+   }) 
+   
+   const handleReport = () => {
+
+    if (window.confirm("Are you want to report?")) {
+
+        fetch(`http://localhost:5000/productReport/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.success(`${title}, is reported`)
+            })
+    }
+
+
+}
 
     return (
         <div>
@@ -20,7 +53,13 @@ const ProductSummaryCard = ({category,setProductInfo}) => {
         <div className='ml-5'>
            <div className='flex items-center '>
            <h3 className='text-2xl'>{author_name}</h3>
-            <p className='text-blue-700 text-2xl'><FaCheckCircle></FaCheckCircle></p>
+           {
+        sellers.forEach(element => {console.log(element.verifySeller)
+       
+        })
+      }
+             <p className='text-blue-700 text-2xl'><FaCheckCircle></FaCheckCircle></p>
+           
            </div>
            <p>{published_date}</p>
         </div>
@@ -44,15 +83,34 @@ const ProductSummaryCard = ({category,setProductInfo}) => {
     </div>
     <div className="flex items-center mt-4">
     
-        {category?.status !== 'booked' ?
+     <div>
+     {category?.status !== 'booked' ?
          <label
          onClick={()=>setProductInfo(category)}    
-         htmlFor="bookingProductBtn" className="btn w-full btn-outline p-5 rounded-sm">Booking Now</label>
+         htmlFor="bookingProductBtn" className="btn w-full btn-outline p-5 mr-5 rounded-sm">Booking Now</label>
          :
          <label
          className="btn  w-full btn-disabled p-5 rounded-sm">Booking Now</label>
 
         }
+        
+     </div>
+       <div>
+       {report !== 'reported' ?
+                        <label className="btn w-full ml-5 btn-error  p-5 rounded-sm"
+                            onClick={handleReport}>Report To Admin
+                        </label>
+                        :
+                        <label
+                            className="btn btn-sm mt-3"
+                        >Reported To Admin
+                        </label>
+                    }
+
+       </div>
+
+
+
     </div>  
   </div>
   

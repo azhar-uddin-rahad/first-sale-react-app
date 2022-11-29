@@ -1,6 +1,7 @@
 import Category from "../../Category/Category";
 import AddProduct from "../../Dashboard/AddProduct/AddProduct";
-import AllUsers from "../../Dashboard/AllUsers/AllUsers";
+import Seller from "../../Dashboard/AllUsers/Seller";
+import Users from "../../Dashboard/AllUsers/Users";
 import Dashboard from "../../Dashboard/Dashboard/Dashboard";
 import Myproduct from "../../Dashboard/Myproduct/Myproduct";
 import Payment from "../../Dashboard/Payment/Payment";
@@ -64,8 +65,13 @@ const routes =createBrowserRouter([
                     element: <AddProduct></AddProduct>
                 },
                 {
-                    path:'/dashboard/allusers',
-                    element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+                    path:'/dashboard/users',
+                    element: <AdminRoute><Users></Users></AdminRoute>
+              
+                },
+                {
+                    path:'/dashboard/sellers',
+                    element: <AdminRoute><Seller></Seller></AdminRoute>
               
                 },
                 {

@@ -2,11 +2,11 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import toast from 'react-hot-toast';
 
-const AllUsers = () => {
+const Users = () => {
     const {data: users=[],refetch}=useQuery({
        queryKey:['users'],
        queryFn:async()=>{
-        const res =await fetch('https://first-sale-server.vercel.app/users')
+        const res =await fetch('http://localhost:5000/dashboard/users')
         const data =await res.json();
         return data;
        }
@@ -28,9 +28,29 @@ const AllUsers = () => {
         })
 
     } 
-    const handleDelete=id=>{
+   
+  const handleDelete= id => {
+    const proceed = window.confirm("Are you Delete this Items");
+    console.log(id);
+    if(proceed){
+        fetch(`http://localhost:5000/user/${id}`,{
+            method: 'DELETE',
+         headers:{
+          authorization: `bearer ${localStorage.getItem('accessToken')}` 
 
-    } 
+         }
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.deletedCount > 0){
+                alert('deleted successFully');
+
+                refetch()
+            }
+        })
+    }
+} 
     return (
         <div>
             <h1 className='text-2xl'>All users</h1>
@@ -68,4 +88,4 @@ const AllUsers = () => {
     );
 };
 
-export default AllUsers;
+export default Users;

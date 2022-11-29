@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext, useState } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Contex/AuthProvider/AuthProvider';
 
 const Myproduct = () => {
@@ -20,6 +21,30 @@ const Myproduct = () => {
           return data;
       }
   })
+
+const handleAdvertise=id =>{
+  fetch(`http://localhost:5000/myproductAdvertise/${id}`, {
+    method: 'PUT',
+    headers: {
+        'content-type': 'application/json'
+    },
+    body: JSON.stringify()
+})
+    .then(res => res.json())
+    .then(data => {
+        if (data.acknowledged) {
+            refetch()
+            toast.success('Add Advertise Successfully!!')
+        }
+        else {
+            toast.error(data.message)
+        }
+    })
+}
+
+
+
+
 
   const handleDelete= id => {
     const proceed = window.confirm("Are you Delete this Items");
@@ -77,6 +102,14 @@ const Myproduct = () => {
                                 <td>{bookingproduct.resalePrice}</td>
                                 <td>{bookingproduct?.status === "booked" ? "sold" : "available"} </td>
 
+
+
+
+                                <td>   {bookingproduct?.status === 'advertised' || bookingproduct?.status === 'booked' ?
+                                        <th><button className="btn btn-disabled btn-xs">Advertised</button></th>
+                                        :
+                                        <th><button onClick={() => handleAdvertise(bookingproduct._id)} className="btn bg-green-700 btn-xs">Advertise</button></th>
+                                    }</td>
                                 <td><button onClick={() => handleDelete(bookingproduct._id)}>X</button></td>
                                    
                              
