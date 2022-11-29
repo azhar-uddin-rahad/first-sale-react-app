@@ -55,8 +55,11 @@ const Myproduct = () => {
                 <th></th>
                 <th>Image</th>
                 <th>Product Name</th>
+                <th>Price</th>
+                <th>Sales status</th>
+                <th>Advertise</th>
                 <th>Delete</th>
-                <th>Payment</th>
+               
               </tr>
             </thead>
             <tbody>
@@ -70,9 +73,11 @@ const Myproduct = () => {
                               </div>
                               </div>
                               </td>
-                                  <td><div className='w-4/5'>{bookingproduct.title}</div></td>
-                                
-                                  <td><button onClick={() => handleDelete(bookingproduct._id)}>X</button></td>
+                                <td>{bookingproduct.title}</td>
+                                <td>{bookingproduct.resalePrice}</td>
+                                <td>{bookingproduct?.status === "booked" ? "sold" : "available"} </td>
+
+                                <td><button onClick={() => handleDelete(bookingproduct._id)}>X</button></td>
                                    
                              
                               </tr>)
