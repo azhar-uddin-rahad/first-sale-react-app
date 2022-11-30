@@ -6,7 +6,7 @@ const Users = () => {
     const {data: users=[],refetch}=useQuery({
        queryKey:['users'],
        queryFn:async()=>{
-        const res =await fetch('http://localhost:5000/dashboard/users')
+        const res =await fetch('https://first-sale-server.vercel.app/dashboard/users')
         const data =await res.json();
         return data;
        }
@@ -33,7 +33,7 @@ const Users = () => {
     const proceed = window.confirm("Are you Delete this Items");
     console.log(id);
     if(proceed){
-        fetch(`http://localhost:5000/user/${id}`,{
+        fetch(`https://first-sale-server.vercel.app/user/${id}`,{
             method: 'DELETE',
          headers:{
           authorization: `bearer ${localStorage.getItem('accessToken')}` 

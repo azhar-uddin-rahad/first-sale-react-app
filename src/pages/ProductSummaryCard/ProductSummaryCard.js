@@ -7,13 +7,13 @@ import Loder from '../Share/Loder/Loder';
 
 
 const ProductSummaryCard = ({category,setProductInfo}) => {
-    const {_id,title,brand,model,image_url,published_date,author_name,author_img,location,mobile,resalePrice,originalPrice,yearsOfUse,cpuProcessor,memory,storage,operationSystem,batteryPowerSupply,report
+    const {_id,title,email,brand,model,image_url,published_date,author_name,author_img,location,mobile,resalePrice,originalPrice,yearsOfUse,cpuProcessor,memory,storage,operationSystem,batteryPowerSupply,report
     } =category;
 
      const {data: sellers=[],refetch}=useQuery({
       queryKey:['seller'],
       queryFn:async()=>{
-       const res =await fetch('http://localhost:5000/dashboard/seller')
+       const res =await fetch('https://first-sale-server.vercel.app/dashboard/seller')
        const data =await res.json();
        console.log(data.verifySeller)
        return data;
@@ -25,7 +25,7 @@ const ProductSummaryCard = ({category,setProductInfo}) => {
 
     if (window.confirm("Are you want to report?")) {
 
-        fetch(`http://localhost:5000/productReport/${_id}`, {
+        fetch(`https://first-sale-server.vercel.app/productReport/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -40,6 +40,7 @@ const ProductSummaryCard = ({category,setProductInfo}) => {
 
 
 }
+   
 
     return (
         <div>
@@ -52,13 +53,17 @@ const ProductSummaryCard = ({category,setProductInfo}) => {
 </div>
         <div className='ml-5'>
            <div className='flex items-center '>
+           
+          
+            {sellers[0]?.verifySeller === email ?
+           <>
            <h3 className='text-2xl'>{author_name}</h3>
-           {
-        sellers.forEach(element => {console.log(element.verifySeller)
-       
-        })
-      }
-             <p className='text-blue-700 text-2xl'><FaCheckCircle></FaCheckCircle></p>
+            <p className='text-blue-700 text-2xl'><FaCheckCircle></FaCheckCircle></p>
+           </>
+            :
+            <h3 className='text-2xl'>{author_name}</h3>
+   
+            }
            
            </div>
            <p>{published_date}</p>

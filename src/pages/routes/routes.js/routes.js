@@ -5,6 +5,7 @@ import Users from "../../Dashboard/AllUsers/Users";
 import Dashboard from "../../Dashboard/Dashboard/Dashboard";
 import Myproduct from "../../Dashboard/Myproduct/Myproduct";
 import Payment from "../../Dashboard/Payment/Payment";
+import ReportedAdmin from "../../Dashboard/ReportedAdmin";
 import Faq from "../../Faq/Faq";
 import DashBoardLayout from "../../Layout/DashBoardLayout";
 import Login from "../../Login/Login";
@@ -44,11 +45,8 @@ const routes =createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Faq></Faq>
-            },
-            {
-                path: '*',
-                element: <PageNotFound></PageNotFound>
             }
+           
           
         ]
          },
@@ -75,19 +73,28 @@ const routes =createBrowserRouter([
               
                 },
                 {
+                    path:'/dashboard/reported',
+                    element: <AdminRoute><ReportedAdmin></ReportedAdmin></AdminRoute>
+              
+                },
+                {
                     path:'/dashboard/myproduct',
                     element: <Myproduct></Myproduct>
               
                 },
                 {
                     path: '/dashboard/payment/:id',
-                    element: <AdminRoute><Payment></Payment></AdminRoute>,
+                    element: <Payment></Payment>,
                     loader: ({params}) => fetch(`https://first-sale-server.vercel.app/bookingproducts/${params.id}`)
                 }
                 
 
             ]
-         }
+         },
+         {
+            path: '*',
+            element: <PageNotFound></PageNotFound>
+        }
     
 ])
 export default routes;

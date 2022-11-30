@@ -11,7 +11,7 @@ const AdvertiseCard = ({ product,  setProductInfo }) => {
     const { data: dbUserNew = [], /* refetch */ } = useQuery({
         queryKey: ['userDB', email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/userEmail?email=${email}`)
+            const res = await fetch(`https://first-sale-server.vercel.app/userEmail?email=${email}`)
             const data = await res.json()
             // refetch()
             return data;
@@ -27,7 +27,7 @@ const AdvertiseCard = ({ product,  setProductInfo }) => {
 
         if (window.confirm("Are you want to report?")) {
 
-            fetch(`http://localhost:5000/productReport/${_id}`, {
+            fetch(`https://first-sale-server.vercel.app/productReport/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -67,7 +67,7 @@ const AdvertiseCard = ({ product,  setProductInfo }) => {
                         </div>
                     </div>
 
-                    {dbUserNew[0]?.verify !== 'seller' ?
+                    {dbUserNew[0]?.verifySeller !== 'verifySeller' ?
                         <h4 className="text-sm font-bold ">Seller Name: {product.author_name}</h4>
                         :
                         <h4 className="text-sm font-bold mt-3">Seller Name: {product.author_name} <span className='bg-green-700 px-2 py-1 rounded-full text-white'>&#x2714;</span>	</h4>

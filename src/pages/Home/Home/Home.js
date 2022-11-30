@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
            <TopBanner></TopBanner>
-           <AdsCard></AdsCard>
+           
            <CategoryOPtion></CategoryOPtion>
 
 

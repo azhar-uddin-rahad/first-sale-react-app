@@ -7,7 +7,7 @@ const Seller = () => {
     const {data: users=[],refetch}=useQuery({
         queryKey:['users'],
         queryFn:async()=>{
-         const res =await fetch('http://localhost:5000/dashboard/seller')
+         const res =await fetch('https://first-sale-server.vercel.app/dashboard/seller')
          const data =await res.json();
          return data;
         }
@@ -31,7 +31,7 @@ const Seller = () => {
  
      } 
    const handleverify=id=>{
-         fetch(`http://localhost:5000/dashboard/seller/${id}`, {
+         fetch(`https://first-sale-server.vercel.app/dashboard/seller/${id}`, {
            method: 'PUT', 
            headers: {
                authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -51,7 +51,7 @@ const Seller = () => {
       const proceed = window.confirm("Are you Delete this Items");
       console.log(id);
       if(proceed){
-          fetch(`http://localhost:5000/user/${id}`,{
+          fetch(`https://first-sale-server.vercel.app/user/${id}`,{
               method: 'DELETE',
            headers:{
             authorization: `bearer ${localStorage.getItem('accessToken')}` 

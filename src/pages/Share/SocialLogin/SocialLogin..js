@@ -1,26 +1,62 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contex/AuthProvider/AuthProvider';
+import useToken from '../../../hooks/UseToken';
 
 const SocialLogin= () => {
-    const {providerLogin} =useContext(AuthContext)
+    const {providerLogin,updateUser} =useContext(AuthContext)
     const location=useLocation();
     const navigate = useNavigate();
     const from =location.state?.from?.pathname || '/';
+    const [loggedEmail, setLoggedEmail] = useState('')
+    const [token] = useToken(loggedEmail)
+if(token){
+  navigate(from, { replace: true })
+}
+
+
     const handleSocalLogin=()=>{
       
       
         providerLogin()
         .then(result =>{
             const user=result.user;
-            navigate(from, {replace:true})
-            console.log(user);
+            toast("google login successfully");
+            const userInfo = {
+              displayName: user.displayName,
+              email: user.email,
+              accountType:"user",
+          }
 
-
-
+          updateUser(userInfo)
+          .then(()=>{
+            saveUser(user.displayName, user.email, "user")
+          })
+          .catch(error => console.error(error))
+           
         })
         .catch(error => console.log(error))
     }
+    
+    const saveUser = (displayName, email,accountType ) => {
+      const user = { displayName, email, accountType }
+      fetch('https://first-sale-server.vercel.app/users', {
+          method: 'POST',
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(user)
+      })
+          .then(res => res.json())
+          .then(data => {
+              setLoggedEmail(email)
+             
+
+          })
+  }
+
+
     
     return (
         <button onClick={handleSocalLogin}

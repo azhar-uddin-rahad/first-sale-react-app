@@ -23,7 +23,7 @@ const Advertise = () => {
     const { data: bookingProduct = [], /* refetch */ } = useQuery({
         queryKey: ['bookingProducts'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/bookingStatus?status=advertised')
+            const res = await fetch('https://first-sale-server.vercel.app/bookingStatus?status=advertised')
             const data = await res.json()
             setLoading(false)
 

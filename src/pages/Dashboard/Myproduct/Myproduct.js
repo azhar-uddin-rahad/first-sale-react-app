@@ -23,7 +23,7 @@ const Myproduct = () => {
   })
 
 const handleAdvertise=id =>{
-  fetch(`http://localhost:5000/myproductAdvertise/${id}`, {
+  fetch(`https://first-sale-server.vercel.app/myproductAdvertise/${id}`, {
     method: 'PUT',
     headers: {
         'content-type': 'application/json'
@@ -50,7 +50,7 @@ const handleAdvertise=id =>{
     const proceed = window.confirm("Are you Delete this Items");
     console.log(id);
     if(proceed){
-        fetch(`http://localhost:5000/myproduct/${id}`,{
+        fetch(`https://first-sale-server.vercel.app/myproduct/${id}`,{
             method: 'DELETE',
          headers:{
           authorization: `bearer ${localStorage.getItem('accessToken')}` 
