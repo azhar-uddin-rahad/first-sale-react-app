@@ -64,15 +64,16 @@ const BookingModal = ({productInfo,setProductInfo}) => {
 
 
   return (
-   <>
+  <div>
+    {user &&  <>
 <input type="checkbox" id="bookingProductBtn" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box relative">
     <label htmlFor="bookingProductBtn" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
     <h3 className="text-lg font-bold">{title}</h3>
     <form onSubmit={handleBooking} className="grid grid-cols-1 gap-3">
-        <input name="name" type="text"  readOnly defaultValue={user.displayName} className="input input-bordered input-success w-full" />
-    <input name="email" type="email" readOnly defaultValue={user.email} className="input input-bordered input-success w-full" />
+        <input name="name" type="text"  readOnly defaultValue={user?.displayName} className="input input-bordered input-success w-full" />
+    <input name="email" type="email" readOnly defaultValue={user?.email} className="input input-bordered input-success w-full" />
     <input name="price" type="text" readOnly defaultValue={resalePrice} className="input input-bordered input-success w-full" />
     <input name="phone" type="text" placeholder="Type Phone Number" className="input input-bordered input-success w-full" />
     <input name="meeting" type="text" placeholder="Type meeting location" className="input input-bordered input-success w-full" />
@@ -83,6 +84,11 @@ const BookingModal = ({productInfo,setProductInfo}) => {
 </div>
  
    </>
+  
+
+
+    }
+  </div>
   );
 };
 
