@@ -17,6 +17,11 @@ module.exports = {
    animation:{
     hflip: 'flipHorizontal 2s infinite',
     scroll: 'scroll 40s linear infinite',
+   },
+   fontFamily: {
+    'main': ['Josefin Sans', 'sans-serif'],
+    'secondary': ['Raleway', 'sans-serif'],
+    'rear': ['Noto Sans JP', 'sans-serif'],
    }
 
 

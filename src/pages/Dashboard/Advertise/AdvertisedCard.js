@@ -47,10 +47,10 @@ const AdvertiseCard = ({ product,  setProductInfo }) => {
     return (
         <div>
 
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img className='h-72' src={image_url} alt="bikes" /></figure>
+            <div className="card w-96 bg-base-100 text-[#000000] shadow-xl">
+                <figure><img className='h-72 hover:cursor-zoom-in ' src={image_url} alt="bikes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-red-700 fond-bold">{title}</h2>
+                    <h2 className="card-title fond-bold">{title?.length > 60 ? <>{title.slice(0,60) + '....'}</> : title }</h2>
                     <h2 className="text-xl font-bold">Configuration:</h2>
 
                     <h4 className="text-md font-bold mb-3">Price: ${resalePrice}</h4>
@@ -75,24 +75,24 @@ const AdvertiseCard = ({ product,  setProductInfo }) => {
 
                     {status !== 'booked' ?
                         <label htmlFor="bookingProductBtn"
-                            className="btn  bg-orange-500 btn-sm mt-3 hover:px-10"
+                            className="text-[#ffffff] cursor-pointer rounded text-center hover:transition duration-150 ease-linear hover:bg-[#8D99FF] p-3 bg-[#F14D5D]  mt-3 hover:px-10"
                             onClick={() => setProductInfo(product)}>Book Now
                         </label>
                         :
                         <label
-                            className="btn btn-disabled btn-sm mt-3"
-                        >Booked
+                            className="text-[#F14D5D] font-bold  rounded text-center  p-3 opacity-80 cursor-not-allowed  mt-2 bg-[#8D99FF] btn-disabled "
+                        >Already Booked
                         </label>
                     }
 
                     {report !== 'reported' ?
-                        <label className="btn bg-fuchsia-500 btn-sm mt-2 hover:px-10"
+                        <label className="text-[#ffffff] rounded text-center hover:transition duration-150 cursor-pointer ease-linear hover:bg-[#8D99FF] p-3 bg-[#0A1831] mt-2 "
                             onClick={handleReport}>Report To Admin
                         </label>
                         :
                         <label
-                            className="btn btn-sm mt-3"
-                        >Reported To Admin
+                            className="text-[#F14D5D] font-bold  rounded text-center  p-3 bg-gray-400 opacity-80 cursor-not-allowed  mt-2"
+                        >Report Successfully
                         </label>
                     }
                 </div>
