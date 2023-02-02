@@ -1,0 +1,19 @@
+.small-info{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,.8);
+
+}
+.info-card{
+    position: relative;
+
+}
+.stick{
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: red;
+    right: 0;
+    
+   
+}
