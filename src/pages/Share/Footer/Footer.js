@@ -12,12 +12,13 @@ import instagram from '../../../assits/icon/icons8-instagram-48.png';
 const Footer = () => {
   return (
     <div className="bg-[#0A1831] z-0">
-        <div className=" border-b-2 border-[#F14D5D] border-opacity-40">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="ourGrowth">
-          <div className="flex justify-between text-white">
-            <div className="relative flex flex-col lg:flex-row lg:justify-center lg:items-center  w-1/4 justify-center items-center">
-              <div className="lg:w-1/2 w-full p-10">
+       <div>
+       <div className="border-b-2 border-[#F14D5D] border-opacity-40">
+      <div className="max-w-[1440px] mx-auto pl-5 lg:pl-0">
+        <div className="ourGrowth flex pt-10">
+          <div className="flex-col lg:flex lg:flex-row  w-1/2 justify-around text-white">
+             <div className="relative w-full lg:w-1/2 flex justify-center items-center">
+              <div className="w-1/2 p-10">
                 <svg
                   id="svg-9102"
                   version="1.1"
@@ -65,14 +66,14 @@ const Footer = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="lg:w-1/2 w-full ">
+              <div className="w-1/2">
                 <h4 className="font-medium text-xl pb-1 text-[#fff]">Free Shipping</h4>
                 <p className="small-info">No one rejects, dislikes</p>
               </div>
-              <div className="stick invisible lg:visible ">
+              <div className="stick invisible lg:visible">
               </div>
             </div>
-            <div className="relative flex w-1/4 justify-center items-center">
+            <div className="relative w-full lg:w-1/2 flex justify-center items-center">
               <div className="w-1/2 p-10">
                 <svg
                   id="svg-9102"
@@ -118,11 +119,13 @@ const Footer = () => {
                 <h4 className="font-medium text-xl pb-1 text-[#fff]">24/7 Support.</h4>
                 <p className="small-info">It has survived not only.</p>
               </div>
-              <div className="stick">
+              <div className="stick invisible lg:visible">
               </div>
             </div>
-            <div className="relative flex w-1/4  justify-center items-center">
-                
+            </div>
+
+            <div className="flex-col lg:flex lg:flex-row  w-1/2 justify-around text-white">
+            <div className="relative w-full lg:w-1/2 flex justify-center items-center">
               <div className="w-1/2 p-10">
               <svg id="svg-7657" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnslink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 32" style={{enableBackground:"new 0 0 40 32;"}} xmlSpace="preserve">
                     <path id="retail-payment"  style={{ fill: "#F14D5D" }} d="M21.3,22.2H32c0.3,0,0.6-0.2,0.7-0.6c0,0,0,0,0-0.1v-5.9c0-0.3-0.3-0.6-0.6-0.7
@@ -140,17 +143,16 @@ const Footer = () => {
 	l1.5,0.1c0.3,0,0.7,0.2,0.9,0.5C38.6,7.8,38.7,8.2,38.6,8.6L38.6,8.6z"></path> 
                 </svg>
               </div>
-
               <div className="w-1/2">
-                <h4 className="font-medium text-xl pb-1 text-[#fff]">Online Payment.</h4>
-                <p className="small-info">All the Lorem Ipsum on.</p>
+                <h4 className="font-medium text-[16px] pb-1 text-[#fff]">Online Payment.</h4>
+                <p className="small-info text-sm">All the Lorem Ipsum on.</p>
               </div>
 
-              <div className="stick">
+              <div className="stick invisible lg:visible">
               </div>
 
             </div>
-            <div className="relative flex w-1/4 justify-center items-center">
+            <div className="relative w-full lg:w-1/2 flex justify-center items-center">
               <div className="w-1/2 p-10">
               <svg id="svg-7505" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnslink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 34 32" style={{enableBackground: "new 0 0 34 32" }}xmlSpace="preserve">
 <path id="retail-delivery-man"  style={{ fill: "#F14D5D" }} d="M32.3,26.3c-2.6-1.5-5.4-2.5-8.3-3.1l0.2-0.3c0.1-0.1,0.2-0.3,0.1-0.5
@@ -171,23 +173,22 @@ const Footer = () => {
 	L32.9,30.9z M15.9,5.6h2.3c0.3,0,0.5-0.2,0.6-0.5c0,0,0,0,0-0.1V2.3c0-0.3-0.2-0.6-0.5-0.6c0,0,0,0-0.1,0h-2.3
 	c-0.3,0-0.6,0.2-0.6,0.5c0,0,0,0,0,0.1v2.8C15.3,5.3,15.5,5.6,15.9,5.6C15.8,5.6,15.8,5.6,15.9,5.6L15.9,5.6z M16.4,2.8h1.1v1.7
 	h-1.1V2.8z"></path>
-</svg>
+            </svg>
               </div>
               <div className="w-1/2">
-                <h4 className="font-medium text-xl pb-1 text-[#fff]">Fast Delivery.</h4>
+                <h4 className="font-medium text-[16px] pb-1 text-[#fff]">Fast Delivery.</h4>
                 <p className="small-info">Many desktop page now.</p>
               </div>
             </div>
-            
-          </div>
+            </div>
         </div>
       </div>
     </div>
-        <footer className="pt-7">
+      <footer className="pt-7">
            <div className="border-b-2 border-[#F14D5D] border-opacity-40">
-           <div className="max-w-[1440px] mx-auto flex justify-between mb-5">
-            <div className="footer-menu w-1/6">
-            <h4> USEFUL LINKS</h4>
+           <div className="max-w-[1440px] pl-5 lg:pl-0 mx-auto flex flex-wrap justify-around mb-5">
+            <div className="footer-menu w-1/2 lg:w-1/6">
+            <h4>USEFUL LINKS</h4>
             <ul>
                 <li><Link to="#">Privacy Policy</Link></li>
                 <li><Link to="#">Returns</Link></li>
@@ -197,7 +198,7 @@ const Footer = () => {
                 <li><Link to="#">Our Sitemap</Link></li>
             </ul>
     </div>
-            <div className="footer-menu w-1/6">
+            <div className="footer-menu w-1/2 lg:w-1/6">
             <h4>Our Stores</h4>
             <ul>
                 <li><Link to="#">New York</Link></li>
@@ -208,7 +209,7 @@ const Footer = () => {
                 <li><Link to="#">Las Vegas</Link></li>
             </ul>
     </div>
-            <div className="footer-menu w-1/6">
+            <div className="footer-menu w-1/2 lg:w-1/6">
             <h4> USEFUL LINKS</h4>
             <ul>
                 <li><Link to="#">Privacy Policy</Link></li>
@@ -219,7 +220,7 @@ const Footer = () => {
                 <li><Link to="#">Our Sitemap</Link></li>
             </ul>
     </div>
-            <div className="footer-menu w-1/6">
+            <div className="footer-menu w-1/2 lg:w-1/6">
             <h4>Our Stores</h4>
             <ul>
                 <li><Link to="#">New York</Link></li>
@@ -230,10 +231,10 @@ const Footer = () => {
                 <li><Link to="#">Las Vegas</Link></li>
             </ul>
     </div>
-    <div className="w-2/6">
-        <h3>AVAILABLE ON:</h3>
+    <div className="w-full lg:w-2/6">
+        <h3 className="text-xl font-medium text-[#fff] mb-[10px]">AVAILABLE ON:</h3>
         <div className="logo ">
-           <div className="flex justify-around">
+           <div className="flex gap-5">
            <div className="logoOne">
                 <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/08/app-store-button.png.webp" alt="" />
             </div>
@@ -242,10 +243,10 @@ const Footer = () => {
             </div>
            </div>
 
-          <div className="details">
-          <p>Join our newsletter!</p>
-           <span>Will be used in accordance with our Privacy Policy</span>
-           <div className="inputSignup flex gap-3">
+          <div className="details mt-5">
+          <p className="text-sm font-medium text-[#fff] mb-[10px]">Join our newsletter!</p>
+           <span className="text-sm font-medium text-[#fff] mb-[10px]">Will be used in accordance with our Privacy Policy</span>
+           <div className="inputSignup flex gap-3 mt-5">
            <input type="text" placeholder="Type here" className="input input-bordered rounded-3xl border-2 border-[#F14D5D] w-2/3" />
 
            <button className='text-[#ffffff] rounded-3xl bg-[#F14D5D] py-[15px] lg:px-[40px] px-[20px] transition duration-150 ease-linear hover:bg-[#0A1831] w-1/3'><Link className=''  to='#'>Sign up</Link></button>
@@ -258,16 +259,16 @@ const Footer = () => {
             </div>
            </div>
            <div className="payment mt-5 mb-5 border-b-2 border-[#F14D5D] border-opacity-40 pb-5">
-            <div className="max-w-[1440px] mx-auto flex justify-around">
-            <div>
+            <div className="max-w-[1440px] pl-5 lg:pl-0 mx-auto flex flex-wrap lg:flex lg:flex-row items-center gap-5 lg:gap-1">
+            <div className="w-[40%] lg:w-[33%] " >
                 <h3 className="font-medium text-[#fff] text-xl mb-5 ">Payment System:</h3>
                 <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/08/payment.png" alt="" />
             </div>
-            <div>
+            <div className="w-[40%] lg:w-[33%] ">
                 <h3 className="font-medium text-[#fff] text-xl mb-5">Payment System:</h3>
                 <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/08/shipping.png" alt="" />
             </div>
-            <div>
+            <div className="w-[40%]  lg:w-[33%] lg:mt-0">
             <h3 className="font-medium text-[#fff] text-xl mb-5">Our Social Links:</h3>
 
             <div>
@@ -290,6 +291,7 @@ const Footer = () => {
             <p className="text-[#fff] font-medium text-center text-sm p-5">FIRST SELL © 2023 CREATED BY <span className="text-[#F14D5D]"> AZHAR UDDIN RAHAD</span>. PRODUCT RESELLING WEBSITE</p>
            </div>
         </footer>
+       </div>
        
     </div>
   );
