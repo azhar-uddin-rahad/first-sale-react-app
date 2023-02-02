@@ -17,3 +17,28 @@
     
    
 }
+
+.footer-menu h4{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ffff;
+
+
+}
+.footer-menu li a{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: #ffff;
+}
+.socal{
+    display: flex;
+    gap: 5%;
+}
+
+
+

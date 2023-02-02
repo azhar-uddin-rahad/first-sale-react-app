@@ -1,15 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Footer.css'
+import {  FaFacebook } from "react-icons/fa";
+import fd from '../../../assits/icon/icons8-facebook-circled-48.png';
+import pin from '../../../assits/icon/icons8-pinterest-48.png';
+import linkeDin from '../../../assits/icon/icons8-linkedin-48.png';
+import twitter from '../../../assits/icon/icons8-twitter-circled-48.png';
+import instagram from '../../../assits/icon/icons8-instagram-48.png';
+
 
 const Footer = () => {
   return (
-    <div className="bg-[#0A1831] z-0 border-b-4 border-red-500  ">
+    <div className="bg-[#0A1831] z-0">
+        <div className=" border-b-2 border-[#F14D5D] border-opacity-40">
       <div className="max-w-[1440px] mx-auto">
         <div className="ourGrowth">
           <div className="flex justify-between text-white">
-            <div className="relative flex w-1/4 justify-center items-center">
-              <div className="w-1/2 p-10">
+            <div className="relative flex flex-col lg:flex-row lg:justify-center lg:items-center  w-1/4 justify-center items-center">
+              <div className="lg:w-1/2 w-full p-10">
                 <svg
                   id="svg-9102"
                   version="1.1"
@@ -57,11 +65,11 @@ const Footer = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="w-1/2">
+              <div className="lg:w-1/2 w-full ">
                 <h4 className="font-medium text-xl pb-1 text-[#fff]">Free Shipping</h4>
                 <p className="small-info">No one rejects, dislikes</p>
               </div>
-              <div className="stick">
+              <div className="stick invisible lg:visible ">
               </div>
             </div>
             <div className="relative flex w-1/4 justify-center items-center">
@@ -174,6 +182,115 @@ const Footer = () => {
           </div>
         </div>
       </div>
+    </div>
+        <footer className="pt-7">
+           <div className="border-b-2 border-[#F14D5D] border-opacity-40">
+           <div className="max-w-[1440px] mx-auto flex justify-between mb-5">
+            <div className="footer-menu w-1/6">
+            <h4> USEFUL LINKS</h4>
+            <ul>
+                <li><Link to="#">Privacy Policy</Link></li>
+                <li><Link to="#">Returns</Link></li>
+                <li><Link to="#">Terms & Conditions</Link></li>
+                <li><Link to="#">Contact Us</Link></li>
+                <li><Link to="#">Latest News</Link></li>
+                <li><Link to="#">Our Sitemap</Link></li>
+            </ul>
+    </div>
+            <div className="footer-menu w-1/6">
+            <h4>Our Stores</h4>
+            <ul>
+                <li><Link to="#">New York</Link></li>
+                <li><Link to="#">London SF</Link></li>
+                <li><Link to="#">Cockfosters BP</Link></li>
+                <li><Link to="#">Los Angeles</Link></li>
+                <li><Link to="#">Chicago</Link></li>
+                <li><Link to="#">Las Vegas</Link></li>
+            </ul>
+    </div>
+            <div className="footer-menu w-1/6">
+            <h4> USEFUL LINKS</h4>
+            <ul>
+                <li><Link to="#">Privacy Policy</Link></li>
+                <li><Link to="#">Returns</Link></li>
+                <li><Link to="#">Terms & Conditions</Link></li>
+                <li><Link to="#">Contact Us</Link></li>
+                <li><Link to="#">Latest News</Link></li>
+                <li><Link to="#">Our Sitemap</Link></li>
+            </ul>
+    </div>
+            <div className="footer-menu w-1/6">
+            <h4>Our Stores</h4>
+            <ul>
+                <li><Link to="#">New York</Link></li>
+                <li><Link to="#">London SF</Link></li>
+                <li><Link to="#">Cockfosters BP</Link></li>
+                <li><Link to="#">Los Angeles</Link></li>
+                <li><Link to="#">Chicago</Link></li>
+                <li><Link to="#">Las Vegas</Link></li>
+            </ul>
+    </div>
+    <div className="w-2/6">
+        <h3>AVAILABLE ON:</h3>
+        <div className="logo ">
+           <div className="flex justify-around">
+           <div className="logoOne">
+                <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/08/app-store-button.png.webp" alt="" />
+            </div>
+            <div className="logoTwo">
+                <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/08/google-play-button.png.webp" alt="" />
+            </div>
+           </div>
+
+          <div className="details">
+          <p>Join our newsletter!</p>
+           <span>Will be used in accordance with our Privacy Policy</span>
+           <div className="inputSignup flex gap-3">
+           <input type="text" placeholder="Type here" className="input input-bordered rounded-3xl border-2 border-[#F14D5D] w-2/3" />
+
+           <button className='text-[#ffffff] rounded-3xl bg-[#F14D5D] py-[15px] lg:px-[40px] px-[20px] transition duration-150 ease-linear hover:bg-[#0A1831] w-1/3'><Link className=''  to='#'>Sign up</Link></button>
+
+           </div>
+
+          </div>
+        </div>
+    </div>
+            </div>
+           </div>
+           <div className="payment mt-5 mb-5 border-b-2 border-[#F14D5D] border-opacity-40 pb-5">
+            <div className="max-w-[1440px] mx-auto flex justify-around">
+            <div>
+                <h3 className="font-medium text-[#fff] text-xl mb-5 ">Payment System:</h3>
+                <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/08/payment.png" alt="" />
+            </div>
+            <div>
+                <h3 className="font-medium text-[#fff] text-xl mb-5">Payment System:</h3>
+                <img src="https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/08/shipping.png" alt="" />
+            </div>
+            <div>
+            <h3 className="font-medium text-[#fff] text-xl mb-5">Our Social Links:</h3>
+
+            <div>
+                <div className="socal">
+                   <Link to=''><img src={fd} alt="" /></Link>
+                   <Link to=''><img src={linkeDin} alt="" /></Link>
+                   <Link to=''><img src={pin} alt="" /></Link>
+                   <Link to=''><img src={twitter} alt="" /></Link>
+                   <Link to=''><img src={instagram} alt="" /></Link>
+                </div>
+             </div>
+                
+            </div>
+
+            </div>
+
+           </div>
+
+           <div>
+            <p className="text-[#fff] font-medium text-center text-sm p-5">FIRST SELL © 2023 CREATED BY <span className="text-[#F14D5D]"> AZHAR UDDIN RAHAD</span>. PRODUCT RESELLING WEBSITE</p>
+           </div>
+        </footer>
+       
     </div>
   );
 };
