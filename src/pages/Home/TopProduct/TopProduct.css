@@ -1,5 +1,5 @@
 
-  .swiper-slide {
+.mainBox .swiper-slide {
     font-size: 18px;
     display: flex;
     background: none;
@@ -7,17 +7,17 @@
     align-items: center;
    
   }
-  .swiper {
+.mainBox  .swiper {
     height: 100%;
     padding-top: 50px;
     margin: 0px auto;
     background-color: #E2E8F0;
   }
-  .swiper-pagination-bullet-active {
+.mainBox .swiper-pagination-bullet-active {
     background: #F14D5D;
     margin-top: 50px;
 }
-.swiper-wrapper{
+.mainBox .swiper-wrapper{
   margin-left: 100px;
   margin-bottom: 50px;
 }

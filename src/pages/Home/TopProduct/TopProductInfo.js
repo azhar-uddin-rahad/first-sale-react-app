@@ -26,7 +26,7 @@ const TopProductInfo = () => {
 
     return (
         <div className='bg-[#E2E8F0] '>
-    <div className="max-w-[1440px] mx-auto">
+    <div className="mainBox max-w-[1440px] mx-auto">
     <div className="mb-[50px]">
         <h1 className="text-5xl font-bold text-center text-[#000000]">
           Our Popular Product
