@@ -5,7 +5,7 @@ import timeImg from '../../../assits/Time.png'
             const Clocks = ({timerDays,timerHours,timerMinutes,timerSeconds}) => {
     return (
         <Fragment>
-            <section id='offerTime' className='bg-[#E2E8F0]  mt-[100px] mb-[100px] '>
+            <section id='offerTime' className='bg-[#E2E8F0]  mt-[100px] pb-[100px] '>
               <div className='max-w-[1440px] mx-auto flex flex-col-reverse lg:flex lg:flex-row justify-center items-center'>
               <div className='lg:w-1/2 w-full lg:mr-14'>
                   <img src={timeImg} className="w-full" alt="" />

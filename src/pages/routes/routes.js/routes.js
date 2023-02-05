@@ -45,7 +45,8 @@ const routes =createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Faq></Faq>
-            }
+            },
+          
            
           
         ]

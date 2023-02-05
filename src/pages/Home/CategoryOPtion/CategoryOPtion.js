@@ -3,10 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 //https://first-sale-server.vercel.app/brands
 const CategoryOPtion = () => {
-  const {
-    data: categoryData = [],
-    refetch,
-    isLoading,
+  const {data: categoryData = [],refetch, isLoading,
   } = useQuery({
     queryKey: ["category"],
     queryFn: async () => {

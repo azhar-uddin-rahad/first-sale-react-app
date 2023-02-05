@@ -1,0 +1,50 @@
+
+  .swiper-slide {
+    font-size: 18px;
+    display: flex;
+    background: none;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .swiper {
+    height: 100%;
+    padding-top: 50px;
+    margin: 0px auto;
+    background-color: #E2E8F0;
+  }
+  .swiper-pagination-bullet-active {
+    background: #F14D5D;
+    margin-top: 50px;
+}
+.swiper-wrapper{
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+.cardImage {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.cardImage img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.cardImage:hover img {
+  transform: scale(1.5);
+}
+
+
+
+@media (max-width: 575px) {
+.swiper-pagination{
+  display: none;
+}
+.swiper-wrapper{
+  margin-left: 0px;
+  margin-bottom: 50px;
+}
+
+}
