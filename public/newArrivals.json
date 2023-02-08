@@ -1,0 +1,86 @@
+[
+    {
+        "_id" : 1,
+        "brand": "apple",
+        "category": "onsell",
+        "prodcit_name":"Apple MacBook Air (2022)",
+        "product_img":"https://i.ibb.co/FhR2LyP/macbook-air-m2-chip-midnight-01-228x228.webp",
+        "price":"160,000",
+        "product_details":"Apple M2 Chip 13.6-Inch Liquid Retina Display 8GB RAM 256GB SSD "
+        },
+    {
+        "_id" : 2,
+        "brand": "apple",
+        "category": "hotsell",
+        "prodcit_name":"Apple MacBook Air (2022)",
+        "product_img":"https://i.ibb.co/ngqmMpx/macbook-air-m2-chip-silver-01-228x228.webp",
+        "price":"120000",
+        "product_details":"Apple M2 Chip 13.6-Inch Liquid Retina Display 8GB RAM 256GB SSD"
+        },
+        {
+            "_id" : 3,
+            "brand": "msi",
+            "category": "trend",
+            "prodcit_name":"MSI Summit E16 Flip Evo ",
+            "product_img":"https://i.ibb.co/W004qzg/summit-e16-flip-evo-a13mt-04-500x500.webp",
+            "price":"120000",
+            "product_details":"MSI Summit E16 Flip Evo A13MT Core i7 13th Gen 16GB RAM 16 FHD+ 165Hz"
+            },
+        {
+            "_id" : 4,
+            "brand": "hp",
+            "category": "onsell",
+            "prodcit_name":"HP ZBook Studio G7",
+            "product_img":"https://i.ibb.co/RP8qZV4/dragonfly-g2-1-500x500.jpg",
+            "price":"100000",
+            "product_details":"The HP ZBook Studio  G7 Mobile Workstation comes with Intel Xeon"
+            },
+    {
+        "_id" : 5,
+        "brand": "apple",
+        "category": "hotsell",
+        "prodcit_name":"Apple MacBook Air (2022)",
+        "product_img":"https://i.ibb.co/2P5mRWM/macbook-air-m2-chip-space-gray-01-228x228.webp",
+        "price":"160,000",
+        "product_details":"Apple M2 Chip 13.6-Inch Liquid Retina Display 8GB RAM 256GB SSD "
+        },
+        {
+            "_id" : 6,
+            "brand": "msi",
+            "category": "premium",
+            "prodcit_name":"MSI Stealth 15M A11SDK",
+            "product_img":"https://i.ibb.co/1fHzBX2/stealth-15m-01-500x500.jpg",
+            "price":"120000",
+            "product_details":"The latest price of MSI Stealth 15M A11SDK Core i7 11th 6GB Graphics"
+            },
+            {
+                "_id" : 7,
+                "brand": "hp",
+                "category": "hotsell",
+                "prodcit_name":"HP Elite Dragonfly G2",
+                "product_img":"https://i.ibb.co/WKd4thg/zbook-power-g7-01-500x500.jpg",
+                "price":"164000",
+                "product_details":"HP Elite Dragonfly G2 Convertible Laptop laptop comes with 11th"
+                },
+                {
+                    "_id" : 8,
+                    "brand": "msi",
+                    "category": "trend",
+                    "prodcit_name":"MSI Stealth 17 Studio A13VI",
+                    "product_img":"https://i.ibb.co/F40FghQ/stealth-17-studio-a13vi-01-500x500.webp",
+                    "price":"120000",
+                    "product_details":"MSI Stealth 17 Studio A13VI Core i9 13th Gen 64GB RAM 4TB SSD "
+                    },
+                
+                {
+                    "_id" : 9,
+                    "brand": "msi",
+                    "category": "premium",
+                    "prodcit_name":"Microsoft Surface Laptop",
+                    "product_img":"https://www.mikronis.hr/_shop/files/products/20652-2965_Image%202.jpg",
+                    "price":"120000",
+                    "product_details":"Microsoft Surface Laptop 4, TouchScreen, AMD Ryzen 5 4680U, 8GB, 256GB SSD"
+                    }
+                
+              
+]

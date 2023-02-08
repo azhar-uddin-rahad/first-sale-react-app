@@ -10,7 +10,6 @@ import Faq from "../../Faq/Faq";
 import DashBoardLayout from "../../Layout/DashBoardLayout";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
-import DisplayError from "../../Share/DisplayError/DisplayError";
 import PageNotFound from "../../Share/PageNotFound/PageNotFound";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRouter from "../PrivateRouter";

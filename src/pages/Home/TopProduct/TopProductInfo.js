@@ -25,7 +25,7 @@ const TopProductInfo = () => {
     })
 
     return (
-        <div className='bg-[#E2E8F0] '>
+    <div className='my-[80px]'>
     <div className="mainBox max-w-[1440px] mx-auto">
     <div className="mb-[50px]">
         <h1 className="text-5xl font-bold text-center text-[#000000]">

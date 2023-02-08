@@ -2,12 +2,12 @@ import React from 'react';
 import Advertise from '../../Dashboard/Advertise/Advertise';
 import CategoryOPtion from '../CategoryOPtion/CategoryOPtion';
 import ExtraSecction from '../ExtraSecction/ExtraSecction';
+import NewArrivals from '../NewArrivals/NewArrivals';
 import ParallaxSection from '../ParallaxSection/ParallaxSection';
 import Timer from '../Timer/Timer';
 import TopBanner from '../TopBanner/TopBanner';
-import TopProduct from '../TopProduct/TopProduct';
 import TopProductInfo from '../TopProduct/TopProductInfo';
-import AdsCard from './AdsCard/AdsCard';
+
 
 const Home = () => {
     return (
@@ -16,8 +16,9 @@ const Home = () => {
            <CategoryOPtion></CategoryOPtion>
            <Advertise></Advertise>
            <Timer></Timer>
-           <TopProductInfo></TopProductInfo>
+           <TopProductInfo></TopProductInfo> 
            <ParallaxSection></ParallaxSection>
+           <NewArrivals></NewArrivals>
            <ExtraSecction></ExtraSecction>
            
             
