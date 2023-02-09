@@ -1,4 +1,5 @@
 import Category from "../../Category/Category";
+import Contact from "../../Contact/Contact";
 import AddProduct from "../../Dashboard/AddProduct/AddProduct";
 import Seller from "../../Dashboard/AllUsers/Seller";
 import Users from "../../Dashboard/AllUsers/Users";
@@ -13,7 +14,6 @@ import Register from "../../Register/Register";
 import PageNotFound from "../../Share/PageNotFound/PageNotFound";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRouter from "../PrivateRouter";
-
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Home } = require("../../Home/Home/Home");
@@ -35,6 +35,10 @@ const routes =createBrowserRouter([
             {
                 path: '/register',
                 element:<Register></Register>
+            },
+            {
+                path: '/contact',
+                element:<Contact></Contact>
             },
             {
                 path: '/category/:id',

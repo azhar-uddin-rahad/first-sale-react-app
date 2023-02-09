@@ -47,8 +47,10 @@ const Advertise = () => {
 
     return (
         <div className='max-w-[1440px] mx-auto'>
-            <h2 className='text-center text-5xl font-bold mt-16 mb-10'>Advertisement Products</h2>
-
+            <h2 className='text-center text-5xl font-bold mt-16 mb-2 text-[#103178]'>Advertisement Products</h2>
+            <p className="text-2xl mb-10 font-bold text-center text-[#000000]">
+            Seller can advertise her product on her account dashboard
+        </p>
 
             <div className='grid justify-center items-center lg:grid-cols-3 md:grid-cols-2 gap-6'>
                 {

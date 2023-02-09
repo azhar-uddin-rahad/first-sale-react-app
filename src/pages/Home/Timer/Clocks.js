@@ -12,8 +12,8 @@ import timeImg from '../../../assits/Time.png'
                 </div>
                 <div className="lg:w-1/2 w-full text-center lg:text-start pt-20 pb-20">
                   <p className='text-sm mb-3 font-secondary text-[#F14D5D] font-semibold'>Limited Time Only</p>
-                  <h4 className='text-4xl font-semibold mb-3 font-secondary'>60% Discount</h4>
-                  <h2 className='text-5xl font-bold mb-8 font-secondary'>Sportswear Products</h2>
+                  <h4 className='text-4xl font-semibold mb-3 font-secondary text-[#103178]'>60% Discount</h4>
+                  <h2 className='text-5xl font-bold mb-8 font-secondary text-[#103178]'>Sportswear Products</h2>
                 <div className='timeZoon flex justify-center lg:justify-start'>
                     <div className="day mr-10 text-center text-[#000000] ">
                     <p  className='text-6xl font-medium font-rear mb-2'>{timerDays}</p>

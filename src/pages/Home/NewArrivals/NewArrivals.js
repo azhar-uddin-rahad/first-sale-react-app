@@ -35,15 +35,15 @@ const NewArrivals = () => {
             <div className='max-w-[1440px] mx-auto'>
                 <div className="headerSection flex justify-between">
                     <div className="headerLeft w-1/4 lg:w-2/3">
-                        <h3>New Arrivals</h3>
+                        <h3 className='text-[#103178] text-4xl font-bold'>New Arrivals</h3>
                     </div>
                     <div className="headerRight w-3/4 lg:w-1/3">
                     <ul className='flex justify-between text-sm text-[#000]'>
-                            <button onClick={()=> setfilterItem(newArrivalsProducts)} >All</button>
-                            <button  onClick={()=>filterProduct('onsell')}>On Sell</button>
-                            <button onClick={()=>filterProduct('hotsell')}>Hot Sell</button>
-                            <button onClick={()=>filterProduct('premium')}>premium</button>
-                            <button onClick={()=>filterProduct('trend')}>Trend</button>
+                            <button onClick={()=> setfilterItem(newArrivalsProducts)} className="text-[#000000] text-xl font-bold">All</button>
+                            <button  onClick={()=>filterProduct('onsell')} className="text-[#000000] text-xl font-bold">On Sell</button>
+                            <button onClick={()=>filterProduct('hotsell')} className="text-[#000000] text-xl font-bold">Hot Sell</button>
+                            <button onClick={()=>filterProduct('premium')} className="text-[#000000] text-xl font-bold">premium</button>
+                            <button onClick={()=>filterProduct('trend')} className="text-[#000000] text-xl font-bold">Trend</button>
                         </ul>
                     </div>
                 </div>

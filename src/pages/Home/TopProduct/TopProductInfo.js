@@ -28,10 +28,10 @@ const TopProductInfo = () => {
     <div className='my-[80px]'>
     <div className="mainBox max-w-[1440px] mx-auto">
     <div className="mb-[50px]">
-        <h1 className="text-5xl font-bold text-center text-[#000000]">
+        <h1 className="text-5xl font-bold text-center text-[#103178] ">
           Our Popular Product
         </h1>
-        <p className="text-2xl mt-5 font-bold text-center text-[#666666]">
+        <p className="text-2xl mt-5 font-bold text-center text-[#000000]">
         This is the most viewed and premium product please <span className='text-[#F14D5D]'>Book Now</span>.
         </p>
       </div>
