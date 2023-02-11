@@ -32,16 +32,23 @@ const Contact = () => {
                     </div>
 
                 </div>
-
-            </div>
                 <div className='contact_form p-5'>
                     <h3 className='text-4xl text-[#103178] font-semibold mb-3'>Fill up the form if you have any question</h3>
-                    <div className='formWraper'>
-
+                    <div className='formWraper '>
+                        <div className='flex justify-between items-center'>
+                        <input type="text" placeholder="Enter Your Name" className="border-2 placeholder-[#103178] bg-[#f0f2f5]  w-1/4 p-4 rounded-2xl" />
+                        <input type="email" placeholder="Email" className="border-2 placeholder-[#103178] bg-[#f0f2f5]  w-1/4 p-4 rounded-2xl" />
+                        <input type="text" placeholder="Phone" className="border-2 placeholder-[#103178] bg-[#f0f2f5]  w-1/4 p-4 rounded-2xl" />
+                        </div>
+                        <textarea className="w-full mt-5 bg-[#f0f2f5] border-2 placeholder-[#103178]  p-10 rounded-xl" placeholder="Bio"></textarea>
+                        <button className=' mt-5  text-[#ffffff]  rounded-3xl bg-[#0A1831] py-[10px] lg:px-[30px] px-[15px] transition duration-150 ease-linear hover:bg-[#F14D5D] '><Link className=''  to='#'>Send Message</Link></button>
 
                     </div>
 
                 </div>
+
+            </div>
+                
             
         </div>
     );

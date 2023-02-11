@@ -8,6 +8,7 @@ function App() {
   return (
     
     <div className="font-main">
+      
      <RouterProvider router={routes}></RouterProvider>
      <Toaster></Toaster>
     </div>

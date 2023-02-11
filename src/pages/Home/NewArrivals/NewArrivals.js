@@ -31,11 +31,11 @@ const NewArrivals = () => {
    
 
     return (
-        <div className='my-[100px]'>
+        <div className='mt-[100px] mb-[400px] lg:mb-[100px]'>
             <div className='max-w-[1440px] mx-auto'>
                 <div className="headerSection flex justify-between">
                     <div className="headerLeft w-1/4 lg:w-2/3">
-                        <h3 className='text-[#103178] text-4xl font-bold'>New Arrivals</h3>
+                        <h3 className='text-[#103178] text-xl  lg:text-4xl font-bold'>New Arrivals</h3>
                     </div>
                     <div className="headerRight w-3/4 lg:w-1/3">
                     <ul className='flex justify-between text-sm text-[#000]'>
