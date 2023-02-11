@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+
 const NewArrivals = () => {
     const [newArrivalsProducts,setNewArrivalsProduct]=useState();
     const [filterItem,setfilterItem]=useState();
@@ -47,6 +48,7 @@ const NewArrivals = () => {
                         </ul>
                     </div>
                 </div>
+                
                 <div className='prodictCard grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2%] mb-5 mt-20 p-5'>
                 {filterItem?.map(newProduct => 
                 <div key={newProduct._id} className="flex justify-between items-center flex-row bg-base-100 p-1 shadow-xl">
@@ -83,6 +85,7 @@ const NewArrivals = () => {
                 }
 
                 </div>
+              
             </div>
         </div>
     );

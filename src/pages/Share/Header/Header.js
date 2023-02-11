@@ -23,7 +23,8 @@ const Header = () => {
         },
         {
           title: "About US",
-          path: "/login",
+         path: '/about',
+              
           
         },
         {

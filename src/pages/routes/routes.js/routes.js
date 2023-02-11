@@ -1,3 +1,4 @@
+import About from "../../About/About/About";
 import Category from "../../Category/Category";
 import Contact from "../../Contact/Contact";
 import AddProduct from "../../Dashboard/AddProduct/AddProduct";
@@ -28,6 +29,11 @@ const routes =createBrowserRouter([
                 path: '/',
                 element:<Home></Home>
             },
+            {
+                path: '/about',
+                element:<About></About>
+            },
+
             {
                 path: '/login',
                 element:<Login></Login>

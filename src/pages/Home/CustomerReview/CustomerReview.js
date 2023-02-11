@@ -35,10 +35,10 @@ const CustomerReview = () => {
     ]
 
     return (
-        <div className="reviewSection bg-[#f9f9f9]">
-            <div className='max-w-[1440px] mx-auto mt-[100px] pt-[100px] pb-[100px] flex justify-between items-center'>
-                <div className='reviewLeft w-1/2'>
-                    <h1 className="text-4xl font-bold leading-[60px] text-[#000000]">What Clients Say About My Product Quality?</h1>
+        <div className="reviewSection bg-[#0A1831]">
+            <div className='max-w-[1440px] mx-auto mt-[100px] pt-[100px] pb-[100px] flex flex-col lg:flex-row justify-between items-center'>
+                <div className='reviewLeft w-full lg:w-1/2'>
+                    <h1 className="text-4xl font-bold leading-[60px] text-[#ffffff]">What Clients Say About My Product Quality?</h1>
                 </div>
                 <>
       <Swiper
@@ -58,26 +58,31 @@ const CustomerReview = () => {
       >
        {productReviews?.map(productReview => 
          <SwiperSlide key={productReview.id}>
-         <div className='reviewRight w-1/2'>
+         <div className='reviewRight relative w-1/2'>
+                        <div className="absolute -top-2 mb-5 -left-10">
+                            <picture>
+                                <img src="https://templates.hibootstrap.com/tezor/default/assets/images/testimonial/testimonial-line.png" alt="" />
+                            </picture>
+                        </div>
                       <div className="text-start">
-                         <p className="text-[#666666]">{productReview.details}</p>
+                         <p className="text-[#ffffff] font-normal">{productReview.details}</p>
                      </div>
                      <div className='flex gap-5 mt-5 '>
-                         <div className='w-1/5'>
+                         <div className='w-1/3 lg:w-1/5'>
                              <picture>
-                                 <img src={productReview.authorImg} className="rounded-[100%] w-full" alt="" />
+                                 <img src={productReview.authorImg} className="rounded-[100%] w-[200px] lg:w-full" alt="" />
                              </picture>
                          </div>
-                         <div className='w-3/5 text-start'>
-                             <h1 className="text-3xl text-[#000000] font-bold">{productReview.authorName}</h1>
-                             <p className="texl-xl text-[#000000] font-medium"> {productReview.authorProportion}</p>
+                         <div className='w-2/3 lg:w-3/5 text-start mb-5'>
+                             <h1 className="text-3xl text-[#ffffff] font-bold">{productReview.authorName}</h1>
+                             <p className="texl-xl text-[#ffffff] font-medium"> {productReview.authorProportion}</p>
                              <div className="flex text-[#F14D5D]">
                      <FaStar></FaStar>
                      <FaStar></FaStar>
                      <FaStar></FaStar>
                      <FaStar></FaStar>
                      <FaStar></FaStar>
-       </div>
+                         </div>
                          </div>
                      </div>
                      </div>

@@ -36,10 +36,10 @@ const Home = () => {
            <ParallaxSection></ParallaxSection>
            <NewArrivals></NewArrivals>
            <TopSeller></TopSeller>
+           <CustomerReview></CustomerReview>
            <CreateNtfs></CreateNtfs>
            <Brand></Brand>
-           <CustomerReview></CustomerReview>
-           <ExtraSecction></ExtraSecction>
+          
            
              
         </div>
