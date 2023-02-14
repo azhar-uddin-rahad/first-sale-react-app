@@ -99,17 +99,17 @@ const OurTeam = () => {
     },
   ];
 
-  return (
-    <div className="bg-[#E5E5E5] my-[100px] py-10 z-10 relative">
+  return ( 
+    <div className="bg-[#E5E5E5] my-[100px] py-10 z-10 relative px-5">
         <div className="max-w-[1440px] mx-auto">
-      <div className="grid grid-cols-4 gap-10 ">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 lg:gap-20 ">
         {sellers?.map((seller) => (
           <motion.div
             whileHover={{ x: -50 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="card w-80 py-5 px-5 justify-start bg-base-100 shadow-xl">
+            <div className="card lg:w-80 py-5 px-5 justify-start bg-base-100 shadow-xl">
               <div className="mb-5">
                 <img
                   src={seller.img} className="w-[40%] rounded-2xl"
@@ -117,8 +117,8 @@ const OurTeam = () => {
                 />
               </div>
               <div className="">
-                <h2 className="card-title text-3xl text-[#000000] hover:text-[#F14D5D]"> {seller.sellerName}</h2>
-                <h3 className="text-[#F14D5D] text-2xl ">{seller.position}</h3>
+                <h2 className="card-title lg:text-3xl text-[#000000] hover:text-[#F14D5D] text-xl"> {seller.sellerName}</h2>
+                <h3 className="text-[#F14D5D] text-sm lg:text-2xl ">{seller.position}</h3>
                 <p className="text-xl"> {seller.details}</p>
                
               </div>

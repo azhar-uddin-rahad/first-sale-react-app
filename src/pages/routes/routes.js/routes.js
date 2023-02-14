@@ -1,4 +1,5 @@
 import About from "../../About/About/About";
+import Blog from "../../Blog/Blog";
 import Category from "../../Category/Category";
 import Contact from "../../Contact/Contact";
 import AddProduct from "../../Dashboard/AddProduct/AddProduct";
@@ -16,10 +17,10 @@ import PageNotFound from "../../Share/PageNotFound/PageNotFound";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRouter from "../PrivateRouter";
 
+
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Home } = require("../../Home/Home/Home");
 const { default: Main } = require("../../Layout/Main");
-
 const routes =createBrowserRouter([
     {
         path:'/',
@@ -53,11 +54,8 @@ const routes =createBrowserRouter([
             } ,  
             {
                 path: '/blogs',
-                element: <Faq></Faq>
-            },
-          
-           
-          
+                element: <Blog></Blog>
+            },      
         ]
          },
          {
