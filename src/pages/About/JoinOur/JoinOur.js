@@ -11,7 +11,7 @@ const JoinOur=()=>{
             <div className="w-1/3">
             <p className="text-[#F14D5D] text-xl mb-2">$20 discount for your first order</p>
             <h2 className="text-[#ffffff] text-3xl mb-2">Join our newsletter and get...</h2>
-            <p className="text-[#7a7a7a] text-sm mb-2 pr-32">Join our email subscription now to get updates on promotions and coupons.</p>
+            <p className="text-[#7a7a7a] text-sm mb-2 pr-32 leading-8">Join our email subscription now to get updates on promotions and coupons.</p>
         <div className="flex items-center bg-[#ffffff] p-2 rounded-md">
        <div className="flex w-4/5 p-3 items-center bg-[#ffffff]">
        <span className="pr-0 mr-0 text-2xl"><FaRegEnvelope></FaRegEnvelope></span>
