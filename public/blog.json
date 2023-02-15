@@ -1,5 +1,5 @@
 [
-    {   "id" : 1,
+    {   
         "authorName" : "Bill Gates",
         "postDate" : "MAY 6, 2021",
         "postReview": 4,
@@ -8,7 +8,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-2.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 2,
+    {   
         "authorName" : "Elon Musk",
         "postDate" : "APRIL 6, 2022",
         "postReview": 5,
@@ -17,7 +17,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-1.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 3,
+    {   
         "authorName" : "Mark zuckerberg",
         "postDate" : "APRIL 6, 2022",
         "postReview": 3,
@@ -26,7 +26,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-4.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 4,
+    {   
         "authorName" : "Mark zuckerberg",
         "postDate" : "APRIL 6, 2022",
         "postReview": 5,
@@ -35,7 +35,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-6.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 5,
+    {   
         "authorName" : "Mark zuckerberg",
         "postDate" : "APRIL 20, 2022",
         "postReview": 2,
@@ -44,7 +44,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-5.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 6,
+    {   
         "authorName" : "Mark zuckerberg",
         "postDate" : "APRIL 16, 2022",
         "postReview": 5,
@@ -53,7 +53,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2021/03/blog-8.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 7,
+    {   
         "authorName" : "Bill Gates",
         "postDate" : "JAN 6, 2022",
         "postReview": 2,
@@ -62,7 +62,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-3.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 8,
+    {   
         "authorName" : "Elon Musk",
         "postDate" : "APRIL 6, 2022",
         "postReview": 5,
@@ -71,7 +71,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-5.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 9,
+    {   
         "authorName" : "Mark zuckerberg",
         "postDate" : "APRIL 6, 2022",
         "postReview": 5,
@@ -80,7 +80,7 @@
         "postImg" : "https://gostore-be87.kxcdn.com/gostore/wp-content/uploads/2020/12/blog-5.jpg",
         "postDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan faucibus ipsum id iaculis faucibus isue."
     },
-    {   "id" : 10,
+    {  
         "authorName" : "Elon Musk",
         "postDate" : "APRIL 6, 2022",
         "postReview": 5,

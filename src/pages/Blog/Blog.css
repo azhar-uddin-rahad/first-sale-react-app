@@ -18,5 +18,16 @@
 .blogImg:hover .content-overlay{
     opacity: 1;
     cursor: pointer;
-  }
+  } 
   
+ .selectedPage{
+    border: red;
+    background: gold;
+    font: bold;
+   
+}
+.pagination button{
+    padding: 15px;
+   
+
+}
