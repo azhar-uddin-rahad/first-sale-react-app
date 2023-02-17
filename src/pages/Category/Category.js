@@ -6,7 +6,8 @@ import ProductSummaryCard from '../ProductSummaryCard/ProductSummaryCard';
 
 const Category = () => {
     const categorys=useLoaderData();
-    const [productInfo,setProductInfo]=useState(null)
+    const [productInfo,setProductInfo]=useState(null);
+    console.log(categorys);
     
     return (
         <div>

@@ -21,9 +21,10 @@
   } 
   
  .selectedPage{
-    border: red;
-    background: gold;
+    border: 1px solid #0A1831;
+    background: #F14D5D;
     font: bold;
+    padding: 4px;
    
 }
 .pagination button{

@@ -10,6 +10,7 @@ const Blog = () => {
     const [count,setCount]= useState(0);
     const [currentPage,setCurrentPage]=useState(0);
     const [size,setSize]= useState(5);
+
    
     useEffect(()=>{
         const URL=`http://localhost:5000/blogs?currentPage=${currentPage}&size=${size}`
@@ -25,6 +26,7 @@ const Blog = () => {
 
 
     const pages = Math.ceil(count /size);
+    console.log(pages?.length)
 
  
     
@@ -105,7 +107,7 @@ const Blog = () => {
                 </div>
             </div>
            {/*  className={currentPage ? "visible" : "invisible" } */}
-                <div className="pagination text-center">
+                <div className="pagination text-center text-lg mb-10">
                        {/*  <p>currently selected Page:{currentPage}</p> */}
                        <button onClick={()=>currentPage > 0 ? setCurrentPage(currentPage-1):setCurrentPage(0)} className={currentPage===0 ? "invisible" : "visible"}><span className='flex gap-2 items-center justify-center'><FaArrowLeft></FaArrowLeft>PREV</span></button>
                     {[...Array(pages).keys()].map(indexNumber => <button key={indexNumber}
@@ -114,8 +116,7 @@ const Blog = () => {
                     > {indexNumber}</button>)
 
                     }
-
-                    <button onClick={()=>currentPage >= 0 && setCurrentPage(currentPage+1)}><span className='flex gap-2 items-center justify-center'>Next<FaArrowRight></FaArrowRight></span></button>
+                    <button onClick={()=>currentPage < pages-1 ? setCurrentPage(currentPage+1) : setCurrentPage(0)} ><span className='flex gap-2 items-center justify-center'>Next<FaArrowRight></FaArrowRight></span></button>
                     <span> <span>post:</span><select onChange={event =>setSize(event.target.value)}>
                         <option value="5" selected>5</option>
                         <option value="10">10</option>

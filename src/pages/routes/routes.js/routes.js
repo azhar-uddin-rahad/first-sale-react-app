@@ -57,6 +57,17 @@ const routes =createBrowserRouter([
                 element: <Blog></Blog>,
                
             },      
+            {
+                path: '/product',
+                element: <Category></Category>,
+                loader: ()=>fetch(`http://localhost:5000/categorys`)
+            } ,   
+            {
+                path: '/support',
+                element: <Faq></Faq>,
+               
+            },
+            
         ]
          },
          {
