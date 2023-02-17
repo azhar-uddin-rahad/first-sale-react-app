@@ -73,14 +73,6 @@ const Header = () => {
             })
           }
 
-      
-         {/* <li className='mr-4 text-[#ffffff]'><NavLink className={({ isActive }) => isActive ? activeLink : normalLink} to='/'>Home</NavLink></li>
-         <li className='mr-4 hover:text-[#F14D5D] text-[#ffffff] '><NavLink className={({ isActive }) => isActive ? activeLink : normalLink} to='/'>About US</NavLink></li>
-         <li className='mr-4 text-[#ffffff]'><NavLink className='transition duration-150 ease-linear hover:text-[#F14D5D]' to='/'>Product</NavLink></li>
-          <li className='mr-4 text-[#ffffff]'><Link className='transition duration-150 ease-linear hover:text-[#F14D5D]' to='/blogs'>Blog</Link></li>
-          <li className='mr-4 text-[#ffffff]'><Link className='transition duration-150 ease-linear hover:text-[#F14D5D]' to='/dashboard'>Dashboard</Link></li>
-         <li className='mr-4 text-[#ffffff]'><Link className='transition duration-150 ease-linear hover:text-[#F14D5D]' to='/dashboard'>Support</Link></li>
-         <li className='mr-4 text-[#ffffff]'><Link className='transition duration-150 ease-linear hover:text-[#F14D5D]' to='/dashboard'>Contact US</Link></li> */}
            </>
     const LoginButton = <>
    {user?.uid ? <>
@@ -106,7 +98,7 @@ const Header = () => {
        {menubar}
       </ul>
     </div>
-   <img src={logo} className="w-20" alt="" />
+   <img className="rounded-3xl w-20" src={logo}   alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu-horizontal font-bold">
